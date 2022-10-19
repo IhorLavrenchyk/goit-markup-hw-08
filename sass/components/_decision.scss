@@ -1,0 +1,49 @@
+.distance {
+  padding-bottom: 0;
+}
+
+.list-title {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+}
+
+.list-item {
+  color: $color-p;
+  line-height: 1.7;
+  width: 270px;
+}
+
+.decision-clause:not(:first-child) {
+  margin-left: 30px;
+}
+.button-benefits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: $background-team;
+  width: 270px;
+  height: 120px;
+}
+.icon-antenna {
+  width: 65px;
+  height: 70px;
+}
+
+.icon-clock {
+  width: 67px;
+  height: 70px;
+}
+
+.icon-diagram {
+  width: 70px;
+  height: 64px;
+}
+
+.icon-astronaut {
+  width: 55px;
+  height: 60px;
+}

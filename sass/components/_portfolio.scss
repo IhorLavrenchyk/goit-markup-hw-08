@@ -1,0 +1,127 @@
+.portfolio-tack {
+  color: $color-text;
+  background-color: $background-team;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-tack.first {
+  padding: 6px 25px;
+}
+
+.btn-set {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.btn-item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.portfolio-guidance:focus,
+.portfolio-guidance:hover {
+  color: $color-white;
+  background-color: $accent-color;
+}
+
+.portfolio-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  color: $color-text;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.portfolio-subtitle-part {
+  font-weight: 700;
+  color: $color-text;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.portfolio-item {
+  font-size: 16px;
+  line-height: 1.9;
+  color: $color-p;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * $card-set-gap);
+  margin-top: calc(-1 * $card-set-gap);
+}
+.card-set {
+  flex-basis: calc(100% / 3 - $card-set-gap);
+}
+.card-item {
+  margin-left: $card-set-gap;
+  margin-top: $card-set-gap;
+}
+
+.card-part {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.card-link-portfolio {
+  position: relative;
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-link-portfolio:hover,
+.card-link-portfolio:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.overlay-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.overlay-card-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: $accent-color;
+}
+
+.card-link-portfolio:hover .overlay-card-move {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $color-white;
+  padding: 63px 24px 0 24px;
+}

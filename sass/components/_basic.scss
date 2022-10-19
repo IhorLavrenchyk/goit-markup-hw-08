@@ -1,0 +1,15 @@
+body {
+  background-color: $color-white;
+  font-family: 'Roboto', sans-serif;
+  color: $color-text;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 15px;
+}
