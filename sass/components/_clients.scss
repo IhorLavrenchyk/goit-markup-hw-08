@@ -1,7 +1,29 @@
 .client {
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 30px;
+    @include desktop {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
   &__item {
-    width: 170px;
+    @include mobilemin {
+      width: calc((100vw - 30px) / 2);
+    }
+
+    width: 210px;
     height: 92px;
+
+    @include tablet {
+      width: 226px;
+    }
+    @include desktop {
+      width: 170px;
+    }
   }
 
   &__link {
@@ -20,17 +42,47 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__link:hover,
+  &__link:hover {
+    @include desktop {
+      border-color: $accent-color;
+    }
+  }
+
   &__link:focus {
     border-color: $accent-color;
   }
 
-  &__link:hover &__svg,
+  &__link:hover &__svg {
+    @include desktop {
+      fill: $accent-color;
+    }
+  }
+
   &__link:focus &__svg {
     fill: $accent-color;
+  }
+  &__unlikely {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.client__unlikely {
+  margin-left: -30px;
+  margin-bottom: -30px;
+  @include desktop {
+    margin: 0;
+  }
+}
+li.client__item {
+  margin-bottom: 30px;
+  margin-left: 30px;
+  @include desktop {
+    margin: 0;
   }
 }
 
 li.client__item:not(:first-child) {
-  margin-left: 30px;
+  @include desktop {
+    margin-left: 30px;
+  }
 }

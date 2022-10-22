@@ -19,20 +19,44 @@
   padding: 6px 25px;
 }
 
+.btn-item-br {
+  margin-right: 50px;
+  @include tablet {
+    margin-right: 0px;
+  }
+}
+
 .btn-set {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-bottom: 50px;
+  @include tablet {
+    justify-content: center;
+  }
 }
 
+.btn-item {
+  margin: 0 8px 15px 0;
+  @include tablet {
+    margin: 0px;
+  }
+}
 .btn-item:not(:first-child) {
-  margin-left: 8px;
+  @include tablet {
+    margin-left: 8px;
+  }
 }
 
-.portfolio-guidance:focus,
-.portfolio-guidance:hover {
+.portfolio-guidance:focus {
   color: $color-white;
   background-color: $accent-color;
+}
+.portfolio-guidance:hover {
+  @include tablet {
+    color: $color-white;
+    background-color: $accent-color;
+  }
 }
 
 .portfolio-subtitle {
@@ -58,6 +82,15 @@
   line-height: 1.9;
   color: $color-p;
 }
+.img-card {
+  width: 450px;
+  @include tablet {
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
+}
 
 .card-set {
   display: flex;
@@ -66,7 +99,9 @@
   margin-top: calc(-1 * $card-set-gap);
 }
 .card-set {
-  flex-basis: calc(100% / 3 - $card-set-gap);
+  @include desktop {
+    flex-basis: calc(100% / 3 - $card-set-gap);
+  }
 }
 .card-item {
   margin-left: $card-set-gap;

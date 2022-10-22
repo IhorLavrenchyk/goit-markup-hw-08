@@ -13,8 +13,14 @@ img {
 }
 
 .unlikely {
-  display: flex;
-  justify-content: center;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .list {
@@ -28,7 +34,10 @@ a {
 }
 
 .sections {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 
 .vissual-hidden {

@@ -8,8 +8,20 @@ body {
 }
 
 .container {
-  width: 1200px;
+  @include mobilemin {
+    max-width: 100vw;
+  }
+
+  width: 480px;
+  padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0px 15px;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }

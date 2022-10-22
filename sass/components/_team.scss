@@ -1,11 +1,38 @@
 .team {
   background-color: $background-team;
+
+  &__photo {
+    max-width: 100%;
+    @include tablet {
+      max-width: 354px;
+    }
+    @include desktop {
+      max-width: 270px;
+    }
+  }
+  &__unlikely {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+      margin-left: -30px;
+      @include desktop {
+        margin-bottom: 0px;
+        margin-left: 0px;
+      }
+    }
+  }
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
 
   &__pretitle {
@@ -17,19 +44,37 @@
   }
 
   &__list-item {
-    width: calc((1170px - 90px) / 4);
+    max-width: 100vw;
     background-color: $color-white;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+
+    @include tablet {
+      width: calc((738px - 30px) / 2);
+      margin-left: 30px;
+    }
+
+    @include desktop {
+      width: calc((1170px - 90px) / 4);
+      margin-left: 0px;
+    }
   }
 
   &__list-item:not(:first-child) {
-    margin-left: 30px;
+    @include desktop {
+      margin-left: 30px;
+    }
   }
   &__name {
-    padding: 30px 0;
+    padding: 30px 0 24px 0;
+
+    @include desktop {
+      padding: 30px 0;
+    }
   }
+
   &__item {
     color: $color-p;
     font-size: 16px;
@@ -60,13 +105,18 @@
 
   &__link:hover,
   &__link:focus {
-    background-color: $accent-color;
+    @include desktop {
+      background-color: $accent-color;
+    }
   }
 
   &__link:hover &__icon,
   &__link:focus &__icon {
-    fill: $color-white;
+    @include desktop {
+      fill: $color-white;
+    }
   }
+
   &__icon {
     display: inline-block;
     fill: $border-color;

@@ -1,14 +1,27 @@
 .footer {
+  &__tablet {
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
   &__title {
     background-color: $background-color;
     padding: 60px 0;
   }
   &__title .container {
-    display: flex;
-    align-items: baseline;
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
   }
   &__logo-full {
     margin-bottom: 20px;
+    text-align: center;
+    @include desktop {
+      text-align: start;
+    }
   }
   &__logo {
     color: $color-white;
@@ -19,6 +32,10 @@
   }
   &__item {
     margin-bottom: 9px;
+    text-align: center;
+    @include desktop {
+      text-align: start;
+    }
   }
 
   &__link {
@@ -38,7 +55,12 @@
   }
 
   &__input {
-    width: 358px;
+    @include mobilemin {
+      width: 100vw;
+    }
+
+    display: block;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -48,6 +70,11 @@
     font-size: 16px;
     line-height: 1.25;
     color: $color-white;
+    margin: 0 auto 20px auto;
+    @include desktop {
+      width: 354px;
+      margin: 0px;
+    }
   }
 
   &__btn {
@@ -66,8 +93,11 @@
     border-radius: 4px;
     border: none;
 
-    margin-left: 12px;
+    margin: 0 auto;
     cursor: pointer;
+    @include desktop {
+      margin-left: 12px;
+    }
   }
 
   &__btn-icon {
@@ -88,7 +118,9 @@ address {
   justify-content: center;
 
   &__footer {
-    margin-left: 70px;
+    @include desktop {
+      margin-left: 70px;
+    }
   }
 
   &__item:not(:first-child) {
@@ -116,12 +148,16 @@ address {
 
   &__link:hover,
   &__link:focus {
-    background-color: $accent-color;
+    @include desktop {
+      background-color: $accent-color;
+    }
   }
 
   &__link:hover &__icon,
   &__link:focus &__icon {
-    fill: $color-white;
+    @include desktop {
+      fill: $color-white;
+    }
   }
 
   &__title {
@@ -129,11 +165,19 @@ address {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
     text-transform: uppercase;
     margin-bottom: 20px;
+    margin-top: 60px;
+    @include desktop {
+      text-align: start;
+      margin-top: 0;
+    }
   }
 
   &__part {
-    display: flex;
+    @include desktop {
+      display: flex;
+    }
   }
 }
