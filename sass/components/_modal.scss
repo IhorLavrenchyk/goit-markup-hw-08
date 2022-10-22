@@ -106,7 +106,7 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  fill: color-text;
+  fill: $color-text;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -162,7 +162,7 @@
 
 .form-fild:focus-within textarea,
 .form-fild:focus-within input {
-  border: 1px solid accent-color;
+  border: 1px solid $accent-color;
 }
 .form-fild:focus-within svg {
   fill: $accent-color;
