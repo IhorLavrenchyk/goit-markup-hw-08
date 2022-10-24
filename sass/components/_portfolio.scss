@@ -30,9 +30,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @include tablet {
     justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 30px;
   }
 }
 

@@ -28,7 +28,7 @@ header {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.5;
+  line-height: 1.17;
 }
 .guidance.curent {
   @include tablet {
@@ -115,6 +115,7 @@ header {
   display: none;
   @include tablet {
     display: flex;
+    font-size: 12px;
     align-items: center;
     color: $color-p;
     font-weight: 500;
@@ -125,6 +126,7 @@ header {
   }
   @include desktop {
     display: flex;
+    font-size: 14px;
   }
 }
 
