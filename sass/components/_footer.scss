@@ -169,9 +169,11 @@ address {
     text-transform: uppercase;
     margin-bottom: 20px;
     margin-top: 60px;
+    @include tablet {
+      margin-top: 0;
+    }
     @include desktop {
       text-align: start;
-      margin-top: 0;
     }
   }
 
